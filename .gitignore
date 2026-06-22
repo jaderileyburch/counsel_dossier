@@ -1,0 +1,29 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local database (build your own with init + pull)
+data/*.db
+*.db
+*.db-wal
+*.db-shm
+
+# Generated outputs
+exports/
+
+# Credentials: never commit a token
+.env
+*.token
+token.txt
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
