@@ -1,0 +1,19 @@
+# Attorney alias map (optional).
+#
+# CourtListener attorney names are extracted per docket, so the same lawyer
+# appears under slightly different spellings (middle initials, suffixes, firm
+# variations). This file collapses known variants of one attorney into a single
+# canonical name so their record is not split across spellings.
+#
+# Format: each canonical name maps to a list of variants. Matching is
+# case-insensitive. Honorifics and trailing credentials like ", Esq." are
+# stripped automatically before matching. After editing this file, run
+# `python cli.py renormalize` to recompute existing rows.
+#
+# Delete the example below and add your own. If this file is empty or absent,
+# the tool falls back to honorific/credential stripping and case folding only.
+
+JANE Q ATTORNEY:
+  - Jane Attorney
+  - J. Q. Attorney
+  - Jane Quincy Attorney

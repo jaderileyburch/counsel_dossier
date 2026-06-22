@@ -1,0 +1,53 @@
+target_id: my-target
+name: Descriptive label for this attorney profile
+
+# The attorney to profile. names are used to search CourtListener; aliases are
+# folded together by the normalizer (see config/aliases.yaml for the alias map).
+attorney:
+  names:
+    - "First Last"
+  bar_id: null
+  firm: null
+
+# Optional filters narrowing the docket search.
+filters:
+  court: null              # CourtListener court id, e.g. "nvd" for D. Nevada. null = all federal.
+  date_filed_min: "2015-01-01"
+  date_filed_max: null
+
+# Classification taxonomy run across pulled order/opinion text.
+# Same engine as a keyword/regex tagger: each category is yes/no per item.
+#   keywords: matched as whole words, case-insensitive
+#   regex: raw regex patterns, case-insensitive
+#   min_matches: how many distinct patterns must hit (default 1)
+taxonomy:
+  sanctions:
+    description: Sanctions, Rule 11, bad faith, fee awards
+    keywords:
+      - sanction
+      - sanctions
+      - sanctioned
+      - Rule 11
+      - bad faith
+      - frivolous
+      - vexatious
+      - fee award
+      - attorney's fees
+      - show cause
+    min_matches: 1
+
+  discovery_abuse:
+    description: Discovery misconduct findings
+    keywords:
+      - failure to comply
+      - motion to compel
+      - discovery abuse
+      - spoliation
+      - withheld
+      - evasive
+
+# Boilerplate fingerprinting settings (used by `fingerprint`).
+fingerprint:
+  shingle_size: 5
+  similarity_threshold: 0.4
+  min_passage_words: 25

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Counsel Dossier :: Jane Q. Attorney</title>
+<style>
+:root {
+  color-scheme: light;
+  --bg: #ffffff; --surface: #f7f7f5; --surface-2: #ececea; --border: #d9d9d4;
+  --text: #1a1a1a; --muted: #5c5c5c; --accent: #7a1f4f; --accent-soft: #f7e9f0;
+  --flag-bg: #fdecec; --flag-border: #e3a9a9; --warn-bg: #fff8e7; --warn-border: #e6d58a;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+.container { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; }
+h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; font-weight: 700; }
+h2 { font-size: 18px; margin: 36px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.subtitle { color: var(--muted); font-size: 14px; margin: 0 0 4px; }
+.meta { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 16px 0 24px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; }
+.card.flag { background: var(--flag-bg); border-color: var(--flag-border); }
+.card .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+.card .value { font-size: 22px; font-weight: 600; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.card .value.small { font-size: 14px; font-weight: 500; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+th { background: var(--surface); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+tr:last-child td { border-bottom: none; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+td.bar-cell { width: 28%; }
+.bar { background: var(--surface-2); height: 6px; border-radius: 3px; overflow: hidden; }
+.bar > span { display: block; height: 100%; background: var(--accent); }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 800px) { .two-col { grid-template-columns: 1fr; } }
+.empty { color: var(--muted); font-style: italic; padding: 12px 0; }
+.passage { background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+  border-radius: 5px; padding: 12px 14px; margin: 10px 0; }
+.passage .pmeta { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.passage .ptext { font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; white-space: pre-wrap;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 8px 10px; }
+.note { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: 6px; padding: 12px 14px;
+  margin: 20px 0; font-size: 13px; line-height: 1.55; }
+.footnote { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); }
+code { font-family: ui-monospace, Menlo, monospace; font-size: 12px; background: var(--surface); padding: 1px 5px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>Counsel Dossier</h1>
+<p class="subtitle">Federal Litigation Profile :: <strong>Jane Q. Attorney</strong></p>
+<div class="meta">Target <code>example-counsel</code> :: generated 2026-06-22T15:53:43.887611+00:00 from local CourtListener data</div>
+
+<div class="cards">
+  <div class="card"><div class="label">Federal dockets</div><div class="value">8</div></div>
+  <div class="card"><div class="label">Date range</div><div class="value small">2020-01-10 to 2026-08-10</div></div>
+  <div class="card"><div class="label">Courts</div><div class="value">2</div></div>
+  <div class="card "><div class="label">Flagged category hits</div><div class="value">0</div></div>
+  <div class="card "><div class="label">Reused passages</div><div class="value">0</div></div>
+</div>
+
+<h2>Caseload by year</h2>
+
+<table><thead><tr><th>Year</th><th class="num">Dockets</th><th class="bar-cell"></th></tr></thead><tbody>
+<tr><td>2020</td><td class="num">1</td>
+<td class="bar-cell"><div class="bar"><span style="width: 50.0%"></span></div></td></tr><tr><td>2021</td><td class="num">1</td>
+<td class="bar-cell"><div class="bar"><span style="width: 50.0%"></span></div></td></tr><tr><td>2022</td><td class="num">1</td>
+<td class="bar-cell"><div class="bar"><span style="width: 50.0%"></span></div></td></tr><tr><td>2023</td><td class="num">1</td>
+<td class="bar-cell"><div class="bar"><span style="width: 50.0%"></span></div></td></tr><tr><td>2024</td><td class="num">1</td>
+<td class="bar-cell"><div class="bar"><span style="width: 50.0%"></span></div></td></tr><tr><td>2025</td><td class="num">1</td>
+<td class="bar-cell"><div class="bar"><span style="width: 50.0%"></span></div></td></tr><tr><td>2026</td><td class="num">2</td>
+<td class="bar-cell"><div class="bar"><span style="width: 100.0%"></span></div></td></tr>
+</tbody></table>
+
+
+<div class="two-col">
+  <div>
+    <h2>Courts</h2>
+    <table><thead><tr><th>Court</th><th class="num">Dockets</th></tr></thead><tbody>
+    <tr><td>nvd</td><td class="num">4</td></tr><tr><td>cacd</td><td class="num">4</td></tr>
+    </tbody></table>
+  </div>
+  <div>
+    <h2>Judge exposure</h2>
+    <table><thead><tr><th>Assigned judge</th><th class="num">Dockets</th></tr></thead><tbody>
+    <tr><td>Judge B. Reyes</td><td class="num">4</td></tr><tr><td>Judge A. Stone</td><td class="num">4</td></tr>
+    </tbody></table>
+  </div>
+</div>
+
+<h2>Nature of suit</h2>
+<table><thead><tr><th>Nature of suit</th><th class="num">Dockets</th></tr></thead><tbody>
+<tr><td>Debt Collection</td><td class="num">8</td></tr>
+</tbody></table>
+
+<div class="two-col">
+  <div>
+    <h2>Parties represented</h2>
+    <table><thead><tr><th>Party</th><th class="num">Dockets</th></tr></thead><tbody>
+    <tr><td>Acme Capital LLC</td><td class="num">8</td></tr>
+    </tbody></table>
+  </div>
+  <div>
+    <h2>Disposition</h2>
+    <table><thead><tr><th>Disposition</th><th class="num">Dockets</th></tr></thead><tbody>
+    <tr><td>Judgment on motion</td><td class="num">4</td></tr><tr><td>Dismissed - settled</td><td class="num">4</td></tr>
+    </tbody></table>
+  </div>
+</div>
+
+<h2>Classification flags</h2>
+<p class="meta">Counts of opinions or order text matching each taxonomy category (for example sanctions or Rule 11 language).</p>
+<div class="empty">No classifications. Run <code>classify</code> first.</div>
+
+<h2>Motion outcomes</h2>
+<p class="meta">Motion types seen in this attorney's dockets, with dispositions read from order text. Success rate counts a grant as a win and a split as half. It reflects how the motion type fared in these cases and is a lead to verify, not a certified personal win rate.</p>
+
+<table><thead><tr><th>Motion type</th><th class="num">Filed</th><th class="num">Granted</th><th class="num">Denied</th><th class="num">Part</th><th class="num">Success</th></tr></thead><tbody>
+
+<tr>
+  <td>Motion for Summary Judgment</td>
+  <td class="num">1</td>
+  <td class="num">0</td>
+  <td class="num">0</td>
+  <td class="num">0</td>
+  <td class="num">n/a</td>
+</tr>
+
+<tr>
+  <td>Motion to Dismiss</td>
+  <td class="num">0</td>
+  <td class="num">1</td>
+  <td class="num">0</td>
+  <td class="num">0</td>
+  <td class="num">100%</td>
+</tr>
+
+</tbody></table>
+
+
+<h2>Frequently cited cases</h2>
+<p class="meta">Authorities this attorney cites most, ranked by how many distinct filings cite them. This is the spine of what they argue.</p>
+
+<table><thead><tr><th>Authority</th><th>Citation</th><th class="num">Filings</th><th class="num">Total</th></tr></thead><tbody>
+
+<tr>
+  <td>Bell Atlantic Corp. v. Twombly</td>
+  <td><code>550 U.S. 544</code></td>
+  <td class="num">2</td>
+  <td class="num">3</td>
+</tr>
+
+<tr>
+  <td>Per Celotex Corp. v. Catrett</td>
+  <td><code>477 U.S. 317</code></td>
+  <td class="num">1</td>
+  <td class="num">1</td>
+</tr>
+
+<tr>
+  <td>Ashcroft v. Iqbal</td>
+  <td><code>556 U.S. 662</code></td>
+  <td class="num">1</td>
+  <td class="num">1</td>
+</tr>
+
+</tbody></table>
+
+
+<h2>Most cited authority by motion type</h2>
+<p class="meta">What this attorney leans on when making each kind of motion.</p>
+
+
+<h3 style="font-size:13px;margin:18px 0 6px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;">Motion for Summary Judgment</h3>
+<table><thead><tr><th>Authority</th><th>Citation</th><th class="num">Filings</th></tr></thead><tbody>
+<tr><td>Per Celotex Corp. v. Catrett</td><td><code>477 U.S. 317</code></td><td class="num">1</td></tr>
+</tbody></table>
+
+
+
+<h2>Recurring phrases</h2>
+<p class="meta">Multi-word phrases reused across this attorney's filings. The short-grain companion to the reused-passage detector below: their habitual phrasing and stock arguments.</p>
+
+<table><thead><tr><th>Phrase</th><th class="num">Filings</th><th class="num">Total</th></tr></thead><tbody>
+
+<tr><td>twombly 550 u s 544 2007</td><td class="num">2</td><td class="num">2</td></tr>
+
+<tr><td>order see bell atlantic corp v</td><td class="num">2</td><td class="num">2</td></tr>
+
+<tr><td>of this stipulated order see bell</td><td class="num">2</td><td class="num">2</td></tr>
+
+<tr><td>hereby stipulate and agree that all</td><td class="num">2</td><td class="num">2</td></tr>
+
+<tr><td>days from the date of entry</td><td class="num">2</td><td class="num">2</td></tr>
+
+<tr><td>date of entry of this stipulated</td><td class="num">2</td><td class="num">2</td></tr>
+
+<tr><td>currently operative deadlines shall be extended</td><td class="num">2</td><td class="num">2</td></tr>
+
+<tr><td>be extended by a period of</td><td class="num">2</td><td class="num">2</td></tr>
+
+<tr><td>atlantic corp v twombly 550 u</td><td class="num">2</td><td class="num">2</td></tr>
+
+<tr><td>agree that all currently operative deadlines</td><td class="num">2</td><td class="num">2</td></tr>
+
+<tr><td>a period of thirty days from</td><td class="num">2</td><td class="num">2</td></tr>
+
+</tbody></table>
+
+
+<h2>Reused language (boilerplate)</h2>
+<p class="meta">Verbatim passages found in more than one of this attorney's filings, longest and most-repeated first.</p>
+<div class="empty">No reused passages found. Fetch document text and run <code>fingerprint</code> first.</div>
+
+<div class="note">
+<strong>Evidentiary framing.</strong>
+This dossier aggregates public federal court records. Caseload, court, and
+disposition figures come from docket metadata and the Federal Judicial Center
+Integrated Database. Classification flags reflect language found in opinion or
+order text and are pointers for review, not adjudicated findings. Reused-passage
+detection shows verbatim overlap between an attorney's own filings; it is a fact
+about their drafting, not a legal conclusion. Coverage is federal only and is
+limited to records present in the local data set, so any count is a floor.
+</div>
+
+<div class="footnote">
+Source: CourtListener / RECAP Archive, public API
+<code>courtlistener.com/api/rest/v4/</code>.
+Generated by Counsel Dossier. Designed by PinkViper Labs.
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+target_id: example-counsel
+name: Example Counsel Profile (placeholder)
+
+# Replace with a real attorney. This placeholder ships so the repo has a
+# working example; it will not match real dockets.
+attorney:
+  names:
+    - "Jane Q. Attorney"
+  bar_id: null
+  firm: "Example Firm LLP"
+
+filters:
+  court: null
+  date_filed_min: "2015-01-01"
+  date_filed_max: null
+
+taxonomy:
+  sanctions:
+    description: Sanctions, Rule 11, bad faith, fee awards
+    keywords:
+      - sanction
+      - sanctions
+      - sanctioned
+      - Rule 11
+      - bad faith
+      - frivolous
+      - vexatious
+      - fee award
+      - show cause
+    min_matches: 1
+
+  discovery_abuse:
+    description: Discovery misconduct findings
+    keywords:
+      - failure to comply
+      - motion to compel
+      - spoliation
+      - withheld
+      - evasive
+
+fingerprint:
+  shingle_size: 5
+  similarity_threshold: 0.4
+  min_passage_words: 25
